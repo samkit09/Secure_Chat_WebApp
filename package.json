@@ -1,0 +1,32 @@
+{
+  "name": "Secure_Chat_WebApp",
+  "version": "1.0.0",
+  "description": "Chat application for local usage",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Samkit Saraf and Shashwat Tare",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "ip": "^1.1.5",
+    "mongoose": "^4.13.21",
+    "nodemon": "^1.11.0",
+    "socket.io": "^1.7.4"
+  },
+  "config": {
+    "server": {
+      "port": "8080"
+    },
+    "db": {
+      "url": "mongodb://localhost:27017/chat"
+    }
+  }
+}
