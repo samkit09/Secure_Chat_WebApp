@@ -300,6 +300,21 @@ body {
   color: #62ebcf;
 }
 
+.reg-btn {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #37ceb0ab;
+  width: -webkit-fill-available;
+}
+.reg-btn:hover {
+  background-color: #62ebcf;
+  transform: scale(1.05);
+  transition: ease 0.5s;
+}
 /*
 .popup-messages .doted-border::after {
     background: transparent none repeat scroll 0 0 !important;

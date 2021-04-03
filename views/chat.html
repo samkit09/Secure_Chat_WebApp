@@ -1,7 +1,7 @@
 <nav class="navbar navbar-dark bg-primary">
   <div class="container-fluid text-center">
     <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown">
-      <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+      <!-- <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/> -->
       <span class="hidden-xs text">{{user | uppercase}}</span>
     </a>
   </div>
@@ -21,9 +21,22 @@
         <div class="box-footer">
           <div>
             <div class="input-group">
-              <input type="text" name="message" placeholder="Type Message ..." class="form-control" ng-model="groupMessage" my-enter="group_message('{{groupMessage}}')"/>
+              <input
+                type="text"
+                name="message"
+                placeholder="Type Message ..."
+                class="form-control"
+                ng-model="groupMessage"
+                my-enter="group_message('{{groupMessage}}')"
+              />
               <span class="input-group-btn">
-                <button type="button" class="btn btn-primary btn-flat" ng-click="group_message(groupMessage)">Send</button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-flat"
+                  ng-click="group_message(groupMessage)"
+                >
+                  Send
+                </button>
               </span>
             </div>
           </div>
@@ -39,7 +52,11 @@
 
           <div class="box-tools pull-right">
             <span class="label label-danger">{{users.length}}</span>
-            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+            <button
+              type="button"
+              class="btn btn-box-tool"
+              data-widget="collapse"
+            >
               <i class="fa fa-minus"></i>
             </button>
             <button type="button" class="btn btn-box-tool" data-widget="remove">
@@ -51,8 +68,12 @@
         <div class="box-body direct-chat-messages">
           <ul class="users-list clearfix">
             <li ng-repeat="user in users">
-              <button data-toggle="modal" data-target="#myModal" ng-click="friend_request(user)">
-                <img src="" alt="User Image" />
+              <button
+                data-toggle="modal"
+                data-target="#myModal"
+                ng-click="friend_request(user)"
+              >
+                <!--<img src="" alt="User Image" />-->
                 <a class="users-list-name">{{user}}</a>
               </button>
             </li>
@@ -77,7 +98,11 @@
 
           <div class="box-tools">
             <span class="label label-danger">{{online_friends.length}}</span>
-            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+            <button
+              type="button"
+              class="btn btn-box-tool"
+              data-widget="collapse"
+            >
               <i class="fa fa-minus"></i>
             </button>
             <button type="button" class="btn btn-box-tool" data-widget="remove">
@@ -90,7 +115,7 @@
           <ul class="users-list clearfix">
             <li ng-repeat="friend in online_friends track by $index">
               <button ng-click="chat_popup(friend)">
-                <img src="" alt="User Image" />
+                <!--<img src="" alt="User Image" />-->
                 <a class="users-list-name">{{friend}}</a>
               </button>
             </li>
@@ -127,10 +152,10 @@
             data-dismiss="modal"
             ng-click="confirm()"
           >
-            ok
+            Ok
           </button>
           <button type="button" class="btn btn-default" data-dismiss="modal">
-            cancel
+            Cancel
           </button>
         </div>
       </div>
